@@ -9,9 +9,9 @@ st.title("Total Sanctions")
 st.write(apmip)
 apmip_pivot_month = apmip.pivot_table(index="FC Paid Details", values='Farmer Contribution',aggfunc="sum")
 apmip_pivot_mandal = apmip.pivot_table(index="Mandal", values=['Boq Amount','Farmer Contribution'],aggfunc="sum")
-apmip_material = apmip[['EMP','Sr No','Material','Invoice Done','Boq Amount']]
+apmip_material = apmip[['EMP','Material','Invoice Done','Boq Amount']]
 print(apmip_material)
-apmip_pivot_material = apmip_material.pivot_table(index='EMP',columns=['Sr No','Material'],aggfunc="sum")
+apmip_pivot_material = apmip_material.pivot_table(index='EMP',columns='Material',aggfunc="sum")
 tab1,tab2,tab3,tab4 = st.tabs(['Employee','Mandal','FC with Transaction','Material Supply'])
 with tab1:
     st.header("Employee")
