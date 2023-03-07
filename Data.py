@@ -1,6 +1,6 @@
 import pandas as pd
 import streamlit as st
-import openpyxl as op
+
 st.set_page_config(page_title="Andhra Pradesh Micro irrigation project Data", page_icon="-----", layout="wide")
 st.title("Andhra Pradesh Micro irrigation project Data:     "
          "Anantapuramu and Sri Satya Sai")
